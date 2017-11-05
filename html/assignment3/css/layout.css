@@ -1,0 +1,29 @@
+
+body{
+	background-color: #F3F3F3;
+	 font-family: 'Open Sans'; 
+}
+.main-container-wrapper{
+	min-width: 1175px
+}
+
+.container{
+
+	width: 1170px;
+	margin: 0 auto;
+ 	
+}
+.header-top{
+	background: url('../images/header-background.png') repeat-x;
+	
+}
+.header-contents{
+	 padding: 27px  0 26px 9px;
+}
+.header-bottom{
+	 
+    font-family: 'Open Sans'; 
+	background : url('../images/Project-navBackground.png') repeat-x;
+	padding: 27px 0 27px 0;
+}
+
