@@ -278,8 +278,11 @@ ul.nav-breadcrumb li a:hover {
 }
 
  .slider-indicators{
+    display: flex;
     padding: 20px;
-    margin-left: 480px;
+    width: 100%;
+ 
+    justify-content: center;
  }
 
 
