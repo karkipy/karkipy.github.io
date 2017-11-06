@@ -30,7 +30,7 @@
 
 .header-navbar-nav .active a{
 
-      background-color: #62A29E;
+    background-color: #62A29E;
     color: #fff;
     border-bottom: 3px solid #528B86;
     border-radius: 5px;
@@ -66,22 +66,29 @@
     position: absolute;
     top: 30px;
     left: 15px;
-    padding: 4px 4px 0 4px;
-    width: 150px;
+   
+    width: 120px;
     background-color: #62A29E;
     border-radius: 5px;
     margin-left: 10px;  
 }
 
 .drop-menu li{
-    width: 300px;
+    width: 500px;
     background-color: #62A29E;
     color: white;
+}
+
+
+.drop-menu li a{
+    display: block;
 }
 
 .drop-menu li:hover{
     background: red;
 }
+
+
 
 
 .search{
@@ -194,6 +201,11 @@ ul.nav-breadcrumb li a:hover {
     float: right;
     vertical-align: middle;
     margin: 0 2px 0 0;
+}
+
+
+.slider-buttons a{
+    color: white;
 }
 
 .btn-slider{
