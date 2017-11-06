@@ -61,34 +61,29 @@
   
 }
 
-.drop-menu{
-    display: none;
-    position: absolute;
-    top: 30px;
-    left: 15px;
-   
-    width: 120px;
-    background-color: #62A29E;
-    border-radius: 5px;
-    margin-left: 10px;  
-}
-
-.drop-menu li{
-    width: 500px;
-    background-color: #62A29E;
-    color: white;
-}
-
-
-.drop-menu li a{
+.dropdown:hover .dropdown-menu{
     display: block;
 }
 
-.drop-menu li:hover{
-    background: red;
+.dropdown-menu{
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    display: none;
+ 
+    color: white;
+    width: 160px;
 }
 
 
+.dropdown-menu li a{
+    margin: 40px 0;
+    border-bottom: solid 1px #000;
+}
+
+.dropdown-menu li a:hover{
+   background: red;
+}
 
 
 .search{
@@ -512,19 +507,20 @@ ul.nav-breadcrumb li a:hover {
 
 
 .related-products-slider ul li:last-child{
-    margin:0 0;
+    margin:0 0 0 15px;
 }
 
 .products-links{
-    margin : 110px 90px;
+    margin : 110px 70px;
 }
 
 .products-links ul li{
      
-    padding: 10px;
+    padding: 10px 15px;
      color: white;
-     font-size: 16px;
+     font-size: 18px;
      font-weight: bolder;
+     border-radius: 5px;
      background-color: #98A3A3;
 }
 
@@ -642,6 +638,7 @@ ul.nav-breadcrumb li a:hover {
     float: left;
     width: 170px;
     margin-left: 35px;
+    margin-right: 20px;
 }
 
 .footer-community ul{
@@ -663,7 +660,7 @@ ul.nav-breadcrumb li a:hover {
 .the-blog{
     float: left;
     text-align: left;
-    width: 355px;
+    width: 370px;
 
 }
 
@@ -696,6 +693,11 @@ ul.nav-breadcrumb li a:hover {
     margin: 0 19px 0px 0;
     text-align: center;
     float: left;
+}
+
+
+.blog-img i{
+    margin: 17px;
 }
 
 .blog-text {
