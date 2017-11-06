@@ -269,6 +269,12 @@ ul.nav-breadcrumb li a:hover {
    
 }
 
+ .slider-control  a{
+
+    color: white;
+ } 
+
+ 
 .slider-control .right{
     height: 57px;
     width: 48px; 
@@ -428,6 +434,11 @@ ul.nav-breadcrumb li a:hover {
 .related-slider-buttons{
     float: right;
     margin-top: -10px;
+}
+
+
+.related-slider-buttons a{
+    color: white;
 }
 
 
@@ -693,7 +704,10 @@ ul.nav-breadcrumb li a:hover {
     text-align: left;
     margin-bottom: 0;
 }
-
+.blog-text a{
+    color: white;
+    text-decoration: none;
+}
 .blog-date {
     
     font-size: 13px;
