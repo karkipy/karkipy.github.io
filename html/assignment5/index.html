@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modus versus</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div class="main-container-wrapper">
+		
+
+
+
+
+			<div class="header">
+
+				<div class="header-top-mobile">
+					<div class="logo">
+						<img src="images/logo.png" alt="Modus Versu Logo" title="Modus versus logo">
+					</div>
+
+					<div class="h_menu">
+						  
+                        <img   src="images/menu.png" alt="Burger menu logo" height="30" title="Burger menu logo">  
+                        <div class="list-menu">
+                              <ul class="mobile-menu-list">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">ABOUT</a></li>
+                                <li><a href="#">SERVICES</a></li>
+                                <li><a href="#">PORTFOLIO</a></li>
+                                <li><a href="#">BLOG</a></li>
+                                <li><a href="#">FEATURES</a></li>
+                                <li><a href="#">CONTACTS</a></li>
+
+                                <li><a href="#">CONTACTS</a></li>
+
+                                <li id="searchEntity"  class="search"><a href="#">SEARCH <i class="fa fa-search"></i> &nbsp;</a>
+
+										<div id="searchHolder"  onmouseout="searchMouse(this)" class="search-holder">
+			                       			<input type="text" placeholder="Search" name="search">
+			                       		</div>
+                                </li>
+                               </ul>                 
+                        </div>
+
+                     
+						 
+					</div>
+
+
+					<div class="navbar-bottom-image"></div>
+					
+				</div>
+
+
+
+
+
+				<div class="header-top">
+					<div class="header-contents container clearfix">
+						<div class="logo">
+							<img src="images/logo.png" alt="Modus Versu Logo" title="Modus versus logo">
+						</div>
+
+						<div class="header-menu">
+			                    <ul class="header-navbar-nav">
+			                        <li><a  class="this-page" href="index.html">home</a></li>
+			                      
+			                        <li><a href="about_us.html">about</a></li>
+			                        <li><a href="services.html">services</a></li>
+			                        <li class="dropdown active">
+			                            <a href="#"><i class="fa fa-angle-down"></i> &nbsp; portfolio</a> 
+
+			                            <ul class="drop-menu">
+			                            	<li> Something missing </li>
+			                            	<li> Something missing </li>
+			                            </ul>
+ 
+			            
+			                        </li>
+			                        <li><a href="blog.html">blog</a></li>
+			                        <li><a href="#">features</a></li>
+			                        <li><a href="contact_us.html">contacts</a></li>
+			                       	<li id="searchEntity"    class="search"> 
+			                       		<a href="#"><i class="fa fa-search"></i> &nbsp;</a>
+
+			                       		<div id="seachHolder" onmouseout="searchMouse(this)" class="search-holder">
+			                       			<input type="text" placeholder="Search" name="">
+			                       		</div>
+			                       	</li>
+
+			                    </ul>				
+						</div>
+
+					</div>
+					 
+
+				</div>
+				
+
+				<div class="header-bottom">
+					<div class="container clearfix">
+						<div class="nav-header">
+							<h3>Portfolio</h3>
+								 <span class="absolute"></span>
+						</div>
+						<ul class="nav-breadcrumb">
+						  <li><a href="#">Home</a></li>
+						  <li><a href="#">Portfolio</a></li>
+						  <li><a href="#">WORDPRESS</a></li>
+						  
+						</ul>
+
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+			<div class="body-contents">
+
+				<div class="container">
+	
+						<div class="product-slider">
+							<div class="product-slider-title clearfix">
+
+								<h3> <span id="mainSliderTitle"></span> </h3>
+
+								<div class="slider-buttons">
+									 
+						                <button type="button" class="btn-slider" id="mainSliderLeft">
+						                	<i class="fa fa-angle-right fa-lg"></i></button>
+						                <button type="button" class="btn-slider"  id="mainSliderRight">
+						                	<i class="fa fa-angle-left fa-lg"></i></button>
+						           
+								</div>
+
+
+							</div>
+
+
+							<div class="slider">
+
+
+						       <div class="sliderImages">
+
+						       		<div id="mainSliderContainer">
+						       			
+
+
+
+						       		</div>
+
+
+										<a class="slider-control left" id="leftControl">
+									        <div class="arrow left">
+									               <i class="fa fa-angle-double-left"></i>
+									        </div>
+									     </a>
+
+
+										<a class="slider-control right" id="rightControl" >
+									        <div class="arrow right">
+									               <i class="fa fa-angle-double-right"></i>
+									        </div>
+									     </a>
+
+						       			
+
+						       </div>
+
+						       <div class="slider-indicators">
+						       		<ul id="indicatorContainer">
+						       				
+						       		</ul>
+
+
+
+						       	
+						       </div>
+								
+							</div>
+							
+						</div>
+
+						<div class="product-description">
+							 <div class="container clearfix">
+							 	
+							 	<div class="project-description clearfix">
+
+							 		<h3 class="title">Project Description</h3>
+
+							 		 <div class="content-details">
+
+							 		 	<p> Maecenas eget turpis turpis. Nunc vel metus augue. Aenean euismod cursus ligula eget dapibus. Praesent vel erat in tortor placerat dignissim. </p>
+
+							 		 	<p>Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+							 		 	
+							 		 </div>
+
+
+							 		
+							 	</div>
+
+							 	<div class="project-details clearfix">
+							 		<h3 class="title">Project Details</h3>
+							 		 <div class="project-content-details">
+							 		 	 
+							 		 	 <ul>	
+							 		 	 	<li class="clearfix">
+							 		 	 		<div class="list-left">
+							 		 	 			<i class="fa fa-calendar"></i>   Release Date
+							 		 	 		</div>
+
+							 		 	 		<div class="list-right">
+							 		 	 			26 May 2013
+							 		 	 		</div>
+
+
+							 		 	 	</li>
+							 		 	 	<li class="clearfix">
+							 		 	 		<div class="list-left">
+							 		 	 			<i class="fa fa-cogs"></i> Technologies
+							 		 	 		</div>
+
+							 		 	 		<div class="list-right">
+							 		 	 			HTML/CSS
+							 		 	 			WORDPRESS
+							 		 	 		</div>
+
+							 		 	 	</li>
+							 		 	 	<li class="clearfix">
+							 		 	 		<div class="list-left">
+							 		 	 			<i class="fa fa-user" ></i> Client
+							 		 	 		</div>
+
+							 		 	 		<div class="list-right">
+							 		 	 			MightyDeals
+							 		 	 		</div>
+
+							 		 	 	</li>
+							 		 	 	<li class="clearfix">
+							 		 	 		<div class="list-left">
+							 		 	 			<i class="fa fa-link" ></i> Project url
+							 		 	 		</div>
+
+							 		 	 		<div class="list-right">
+							 		 	 			<a href="#">View Project</a>
+							 		 	 		</div>
+							 		 	 	</li>
+							 		 	 	 
+
+							 		 	 </ul>	
+							 		 </div>
+							 		
+							 	</div>
+
+
+							 </div>
+						</div>
+
+						<div class="related-products">
+
+							<div class="related-projects-title clearfix">
+								
+								<h3 class="title">Related Projects</h3>
+
+								<div class="line"></div>
+
+								<div class="related-slider-buttons">
+									 
+						                <button type="button" class="related-btn-slider" id="relatedSliderRight">
+						                	<i class="fa fa-angle-right fa-lg"></i></button>
+						                <button type="button" class="related-btn-slider" id="relatedSliderLeft">
+						                	<i class="fa fa-angle-left fa-lg"></i></button>
+						           
+								</div>
+
+
+							</div>
+
+
+							<div class="related-products-slider clearfix">
+
+								<ul class="clearfix" id="relatedSliderContainer">
+									 
+								</ul>
+								
+							 
+
+
+
+							</div>
+
+
+								
+						</div>				 
+						 
+					
+				</div>
+				
+			</div>
+
+			<div class="footer">
+
+				<div class="footer-top">
+				 <div class="footer-top-img">		
+					</div>
+
+					<div class="footer-top-contents container clearfix">
+						
+						<div class="modus-versus">
+						 
+								<img src="images/logo.png" alt="Modus Versu Logo" title="Modus versus logo">
+
+
+								<p class="contact-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec . </p>
+
+								<p class="contact-info">Phone: <span>182 2569 5896</span></p>
+
+								<p class="contact-info">e-mail: <span>info@modu.versus</span></p>
+							 
+							
+						</div>
+
+						<div class="footer-company">
+							<h2>Company</h2>
+
+							<ul class="footer-lists">
+		                        <li><a href="#">About</a></li>
+		                        <li>FAQ</li>
+		                        <li>Contact</li>
+		                        <li>Terms</li>
+		                        <li>Privacy</li>
+		                        <li>Testimonials</li>
+		                    </ul>
+
+						</div>
+
+						<div class="footer-community">
+							<h2>Community</h2>
+
+							<ul class="footer-lists">
+		                        <li><a href="#">Blog</a></li>
+		                        <li>Forum</li>
+		                        <li>Support</li>
+		                        <li>NewsLetter</li>
+		                         
+		                    </ul>
+							
+
+
+
+						</div>
+
+						<div class="the-blog">
+							<h2 class="blog-header">from the <span>BLOG</span></h2>
+
+
+							<ul>
+								<li>
+									<div class="blog-post clearfix">
+				                        <div class="blog-img"><i class="fa fa-picture-o fa-2x"></i></div>
+				                        <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				                        <p class="blog-date">26 May, 2013</p>
+				                    </div>
+											 
+								</li>
+								<li>
+									<div class="blog-post clearfix">
+				                        <div class="blog-img"><i class="fa fa-picture-o fa-2x"></i></div>
+				                        <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				                        <p class="blog-date">26 May, 2013</p>
+				                    </div>
+											 
+								</li>
+							</ul>
+							
+							
+
+
+
+
+						</div>
+
+					</div>
+
+			 	</div>
+				
+
+			 	<div class="footer-bottom">
+			 		<div class="container clearfix">
+
+			 			<div class="footer-left">
+			 				2013 ModusVersus
+			 			</div>
+
+
+			 			<div class="footer-right">
+			 				
+
+		                    <a href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+
+		                    <a href="#" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
+
+		                    <a href="#" target="_blank"><i class="fa fa-tumblr fa-2x"></i></a>
+		                      <a href="#" target="_blank"><i class="fa fa-rss fa-2x"></i></a>
+			 			</div>
+			 			
+			 		</div>
+
+
+			 	</div>
+
+			</div>
+
+
+
+	</div>
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
