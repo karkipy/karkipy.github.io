@@ -31,3 +31,9 @@ function stopAudio(indicator) {
   loadedSounds[indicator].pause();
   loadedSounds[indicator].currentTime = 0;
 }
+
+
+function drawText(text, x, y,color='white') {
+  ctx.fillStyle = color;
+  ctx.fillText(text, x, y);
+}

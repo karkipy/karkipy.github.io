@@ -2,22 +2,31 @@
 // Register here the images and sounds alike with same contract i.e. id and src
 
 const SCREEN_WIDTH =  800;
-const SCREEN_HEIGHT = 600;
+const SCREEN_HEIGHT = 400;
+const GROUND_HEIGHT = 64;
 
 const IMAGES = [
-  { id: PLAYER_INDICATOR, src : 'images/MC.png' },
-  { id: GAME_TILES_INDICATOR, src: 'images/tiles.png'},
-  { id: BACKGROUND_SKY_INDICATOR, src: 'images/sky.png' },
+  { id: PLAYER_SPRITE_INDICATOR, src : 'images/PlayerSprite.png' },
+  { id: GAME_UTIL_SPRITE_INDICATOR, src: 'images/UtilsSprite.png' }
 ];
 
 const SOUNDS = [
-  { id: PLAYER_INDICATOR, src : 'sounds/hurricaneKick.mp3' },
+  { id: PLAYER_SPRITE_INDICATOR, src : 'sounds/hurricaneKick.mp3' },
 ];
+
+// Moves
+const LEFT = 'LEFT';
+const RIGHT = 'RIGHT';
+const UP = 'UP';
+const DOWN = 'DOWN';
+const ENTER = 'ENTER';
 
 const registerMoves = {
   RIGHT: [39, 68],
   LEFT: [37, 65],
   UP: [38, 87],
+  DOWN: [40, 83],
+  ENTER: [13],
 }
 
 

@@ -5,8 +5,12 @@
 
 .canvas-container{
   margin: auto;
-  border: 1px solid black;
   width: 800px;
-  height: 600px;
+  height: 400px;
   margin-top: 50px;
+}
+
+@font-face {
+  font-family: gameFont;
+  src: url(../fonts/joystix_monospace.ttf);
 }
