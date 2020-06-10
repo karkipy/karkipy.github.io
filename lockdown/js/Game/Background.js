@@ -1,4 +1,4 @@
-class Mountain extends SpriteRender {
+class Mountain extends SpriteRenderer {
   constructor(ctx, type, x) {
     super(ctx);
     this.indicator = MOUNTAIN_INDICATOR;
@@ -13,7 +13,7 @@ class Mountain extends SpriteRender {
 }
 
 
-class Sky extends SpriteRender {
+class Sky extends SpriteRenderer {
   constructor(ctx, x) {
     super(ctx);
     this.indicator = BACKGROUND_SKY_INDICATOR;
@@ -28,7 +28,7 @@ class Sky extends SpriteRender {
 }
 
 
-class BillBoard extends SpriteRender {
+class BillBoard extends SpriteRenderer {
   constructor(ctx, x) {
     super(ctx);
     this.x = x;
@@ -44,7 +44,7 @@ class BillBoard extends SpriteRender {
 }
 
 
-class Cloud extends SpriteRender {
+class Cloud extends SpriteRenderer {
   constructor(ctx, type, x, y) {
     super(ctx);
     this.indicator = CLOUD_INDICATOR;
@@ -63,7 +63,7 @@ function getRandomInt(max, min = 0) {
 }
 
 
-class Background extends SpriteRender {
+class Background extends SpriteRenderer {
   constructor(ctx, duration) {
     super(ctx);
     this.ctx = ctx;

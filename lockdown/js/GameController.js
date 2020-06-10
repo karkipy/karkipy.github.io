@@ -18,6 +18,34 @@ const getGameObstacles = (ctx) => {
     new Car(ctx, 4434, 1),
     new Box(ctx, 4672, [[0, 0, 1, 1], [0, 1, 1, 1], [1, 1, 1, 1]]),
   ];
+};
+
+const getEnemeies = (ctx) => {
+  return [
+    // new Corona(ctx, 1071, 270),
+    new Police(ctx, 1200, 285, RIGHT),
+    new Police(ctx, 1730, 285, RIGHT),
+    new Police(ctx, 2734, 285, RIGHT),
+    new Police(ctx, 2895, 285, LEFT),
+    new Police(ctx, 3079, 285, LEFT),
+    new Police(ctx, 3985, 285, RIGHT),
+    new Police(ctx, 4178, 285, RIGHT),
+  ];
+};
+
+
+const getGameMap = (obstacles=[]) => {
+  let map = [{ x: 0, y: SCREEN_HEIGHT - GROUND_HEIGHT }];
+
+  obstacles.forEach((obs, idx) => {
+    const res = obs.getDimensionWithFollowUp();
+    if (Array.isArray(res)) {
+      map = [ ...map, ...res];
+    } else {
+      map = [...map, res];
+    }
+  });
+  return map;
 }
 
 class GameController {
@@ -28,15 +56,19 @@ class GameController {
     this.x = 0;
     this.y = 0;
     this.ground = new Ground(ctx);
-    this.player = new Player(ctx);
     this.key = [];
     this.gift = null;
     this.airplane = new AirPlane(ctx);
     this.house = new Building(ctx, 0, 15, false);
     this.office = new Building(ctx, 1, 5324, true);
-
     this.obstacles = getGameObstacles(ctx);
     this.airplane.setGiftCb(this.setGift.bind(this));
+    this.map = getGameMap(this.obstacles);
+    this.player = new Player(ctx);
+    this.enemies = getEnemeies(ctx);
+    this.enemies.forEach((em) => {
+      em.attachMap(this.map);
+    });
   }
 
 
@@ -57,21 +89,16 @@ class GameController {
 
   removeKey(key) {
     this.key = this.key.filter(f => f !== key);
+    this.player.onKeyRemoved(key);
   }
 
 
   updateKey(key) {
     if (!this.key.includes(key)) {
+      // dont over populate
       this.key = [ ...this.key, key];
     }
-    if (moveMapper[key] === 'RIGHT')  {
-      this.x += 20;
-      this.ctx.translate(-20, this.y);
-    }
-    if (moveMapper[key] === 'LEFT' && this.x >= 0) {
-      this.x -= 20;
-      this.ctx.translate(20, this.y);
-    }
+    this.player.onKeyPressed(key);
   }
 
   draw() {
@@ -81,23 +108,30 @@ class GameController {
     this.office.draw();
     this.obstacles.forEach((obs) => {
       obs.draw()
+    });
+
+    this.enemies.forEach((enemy) => {
+      enemy.draw();
     })
-    this.player.onMove(this.key);
     this.player.draw();
+    this.updateBackground();
     // this.drawIntro();
   }
 
 
   updateBackground() {
-    this.x -= 20;
-    this.ctx.translate(this.x, this.y);
-    // const playerX = this.player.getX();
-    // const centerpos = (this.x + SCREEN_WIDTH) / 2;
-    // const playerSpeed = this.player.getDx();
-    // if (playerX > centerpos) {
-    //   this.x += playerSpeed;
-    //   this.player.updateMinX(this.x*2)
-    // }
+    const playerX = this.player.getX();
+    const centerpos = this.x + SCREEN_WIDTH / 2;
+    const playerSpeed = this.player.getDx();
+    if (playerX > centerpos) {
+      this.x += playerSpeed;
+      this.player.updateMinX(this.x);
+      this.ctx.translate(-playerSpeed, this.y);
+    }
+
+    this.enemies.forEach((enemy) => {
+        enemy.updateWorldDimension(this.x);
+      });
   }
 
 

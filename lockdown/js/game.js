@@ -3,6 +3,7 @@ class Game {
     this.gameScreen = [
       { key: 'menu', item: new Menu(ctx) },
       { key: 'gamecontroller', item: new GameController(ctx) },
+      { key: 'gameover', item: new GameOver(ctx) },
     ];
     this.currentItem = this.gameScreen[1];
     this.duration = 1;

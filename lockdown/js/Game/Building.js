@@ -1,4 +1,4 @@
-class Building extends SpriteRender {
+class Building extends SpriteRenderer {
   constructor(ctx, type, xPos, doorState) {
     super(ctx);
     this.image = loadedImages[GAME_UTIL_SPRITE_INDICATOR];

@@ -10,15 +10,19 @@ const PLAYER_WIDTH = 50;
 const WALK = 'WALK';
 const JUMP = 'JUMP';
 const NORMAL = 'NORMAL';
+const IDLE = 'IDLE';
 
 
-function generateSpriteObject(sourceX, sourceY, sourceWidth, sourceHeight, nums, diffX = 0, diffY = 0) {
- return new Array(nums).fill(null).map((m, idx) => {
-    const sX = sourceX + idx * diffX;
-    const sY = sourceY + idx * diffY;
-    return getSpriteObject(sX, sY, sourceWidth, sourceHeight, 0, 0, sourceWidth, sourceHeight);
+function generateSpriteObject(sourceX, sourceY, sourceWidth, sourceHeight) {
+ return  sourceX.map((sX, idx) => {
+    const sY = sourceY[idx];
+    const sourceW = sourceWidth[idx];
+    const sourceH = sourceHeight[idx];
+    return getSpriteObject(sX, sY, sourceW, sourceH, 0, 0, sourceW, sourceH);
   });
 }
+
+
 
 
 
@@ -61,6 +65,13 @@ const SPRITE_MAPPER = {
 
   ],
 
+  [COFFIN_INDICATOR]: [
+    getSpriteObject(0, 915, 134, 98, 0, 0, 134, 98),
+    getSpriteObject(136, 915, 134, 98, 0, 0, 134, 98),
+    getSpriteObject(272, 915, 134, 98, 0, 0, 134, 98),
+    getSpriteObject(408, 915, 134, 98, 0, 0, 134, 98),
+
+  ],
   [OBSTACLE_INDICATOR]: [
     // 0 for car left view 1 for car right view 2 for cone and 3 for box
     getSpriteObject(0, 553, 100, 64, 0, 272,100, 64),
@@ -72,18 +83,80 @@ const SPRITE_MAPPER = {
   [CURSOR_INDICATOR]: getSpriteObject(LOGO_WIDTH, 680, 16, 26, 0, 0, 16, 26),
 
   [GIFT_INDICATOR]: getSpriteObject(0, 0, 32, 32, 0, 0, 16, 16),
+  // Enemy
+  [CORONA_INDICATOR]: getSpriteObject(0, 0, 32, 32, 0, 0, 32, 32),
+  [POLICE_INDICATOR]: {
+    [IDLE]: {
+      [RIGHT]: [
+        getSpriteObject(0, 32, 24, 48, 0, 0, 24, 48),
+        getSpriteObject(26, 32, 24, 48, 0, 0, 24, 48),
+      ],
+      [LEFT]: [
+        getSpriteObject(0, 80, 24, 48, 0, 0, 24, 48),
+        getSpriteObject(26, 80, 24, 48, 0, 0, 24, 48),
+      ],
+    },
+    [WALK]: {
+      [RIGHT]: generateSpriteObject(
+        [0, 31, 68, 94, 120, 150, 183, 214],
+        new Array(8).fill(128),
+        [29, 35, 24, 24, 28, 31, 29, 27],
+        new Array(8).fill(50)
+      ),
+      [LEFT]: generateSpriteObject(
+        [0, 31, 68, 94, 120, 150, 183, 214],
+        new Array(8).fill(178),
+        [29, 35, 24, 24, 28, 31, 29, 27],
+        new Array(8).fill(50)
+      )
+    },
+
+  },
+
+
+
   [PLAYER_SPRITE_INDICATOR]:  {
-    [NORMAL]: {
-      [RIGHT] : generateSpriteObject(0, 0, 24, 49, 7, 22),
-      [LEFT] : generateSpriteObject(0, 50, PLAYER_WIDTH, PLAYER_HEIGHT, 7, PLAYER_WIDTH),
+    [IDLE]: {
+      [RIGHT] : generateSpriteObject(
+        [0, 24, 48, 72, 96, 120, 144],
+        new Array(7).fill(0),
+        new Array(7).fill(22),
+        new Array(7).fill(49),
+        ),
+      [LEFT] : generateSpriteObject(
+        [0, 24, 48, 72, 96, 120, 144],
+        new Array(7).fill(49),
+        new Array(7).fill(22),
+        new Array(7).fill(49),
+        ),
     },
     [WALK] : {
-      [RIGHT]: generateSpriteObject(0, 100, PLAYER_WIDTH, PLAYER_HEIGHT, 8, PLAYER_WIDTH),
-      [LEFT]: generateSpriteObject(0, 150, PLAYER_WIDTH, PLAYER_HEIGHT, 8, PLAYER_WIDTH),
+      [RIGHT]: generateSpriteObject(
+        [0, 29, 58, 80, 104, 134, 166, 196],
+        new Array(8).fill(98),
+        [27, 27, 20, 22, 28, 30, 28, 24],
+        new Array(8).fill(50),
+      ),
+      [LEFT]: generateSpriteObject(
+        [0, 29, 58, 80, 104, 134, 166, 196],
+        new Array(8).fill(148),
+        [27, 27, 20, 22, 28, 30, 28, 24],
+        new Array(8).fill(50),
+      ),
     },
     [JUMP]: {
-      [RIGHT]: generateSpriteObject(0, 200, PLAYER_WIDTH, PLAYER_HEIGHT, 3, PLAYER_WIDTH),
-      [LEFT]: generateSpriteObject(0, 250, PLAYER_WIDTH, PLAYER_HEIGHT, 3, PLAYER_WIDTH),
+      [RIGHT]: generateSpriteObject(
+        [0, 25, 49],
+        new Array(3).fill(198),
+        [23, 22, 20],
+        new Array(3).fill(48),
+      ),
+      [LEFT]: generateSpriteObject(
+        [0, 25, 49],
+        new Array(3).fill(246),
+        [23, 22, 20],
+        new Array(3).fill(48),
+      )
     }
   }
 }

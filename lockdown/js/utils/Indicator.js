@@ -29,9 +29,19 @@ const BUILDING_TOP = getUniqueIndicator();
 const DAI_INDICATOR = getUniqueIndicator();
 const DAI_CAR_INDICATOR = getUniqueIndicator();
 
+// Coffin
+const COFFIN_INDICATOR = getUniqueIndicator();
+
 
 // obstacle
 const OBSTACLE_INDICATOR = getUniqueIndicator();
+
+// Enemy
+
+const ENEMY_SPRITE_INDICATOR = getUniqueIndicator();
+const CORONA_INDICATOR = getUniqueIndicator();
+const POLICE_INDICATOR = getUniqueIndicator();
+
 
 // misc
 const AIRPLANE_INDICATOR = getUniqueIndicator();
@@ -46,3 +56,8 @@ const BANNER_END_INDICATOR = getUniqueIndicator();
 const GIFT_INDICATOR = getUniqueIndicator();
 const HEALTH_INDICATOR = getUniqueIndicator();
 const POWERUP_INDICATOR = getUniqueIndicator();
+
+
+// Sounds
+
+const RAP_INDICATOR = getUniqueIndicator();

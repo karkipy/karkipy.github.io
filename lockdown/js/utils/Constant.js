@@ -7,11 +7,12 @@ const GROUND_HEIGHT = 64;
 
 const IMAGES = [
   { id: PLAYER_SPRITE_INDICATOR, src : 'images/PlayerSprite.png' },
-  { id: GAME_UTIL_SPRITE_INDICATOR, src: 'images/UtilsSprite.png' }
+  { id: GAME_UTIL_SPRITE_INDICATOR, src: 'images/UtilsSprite.png' },
+  { id: ENEMY_SPRITE_INDICATOR, src: 'images/EnemySprite.png' },
 ];
 
 const SOUNDS = [
-  { id: PLAYER_SPRITE_INDICATOR, src : 'sounds/hurricaneKick.mp3' },
+  { id: RAP_INDICATOR, src: 'sounds/raptest.mp3'},
 ];
 
 // Moves

@@ -1,4 +1,4 @@
-class Obstacle extends SpriteRender {
+class Obstacle extends SpriteRenderer {
   constructor(ctx) {
     super(ctx);
     this.image = loadedImages[GAME_UTIL_SPRITE_INDICATOR];
@@ -8,8 +8,9 @@ class Obstacle extends SpriteRender {
     this.drawSprite(this.image, this.dimension);
   }
 
-  getYVal() {
-
+  getDimensionWithFollowUp() {
+    // returns array always
+    return [{ x: this.x, y: this.y  }, { x: this.x + this.width, y: SCREEN_HEIGHT - GROUND_HEIGHT }];
   }
 }
 
@@ -39,6 +40,7 @@ class Cone extends Obstacle{
   }
 }
 
+
 class Box extends Obstacle{
   constructor(ctx, x, matrix = [[]]) {
     super(ctx);
@@ -63,6 +65,19 @@ class Box extends Obstacle{
         }
       });
     });
+  }
+
+  getDimensionWithFollowUp() {
+    const singularMatirx = this.matrix.reduce((r, a) => a.map((b, i) => (r[i] || 0) + b), []);
+    const dimension = singularMatirx.map((m, idx) => {
+      const x = this.x + idx * this.width;
+      const y = this.y - (m - 1) * this.height;
+      return {
+        x,
+        y,
+      }
+    });
+    return [...dimension, { x: this.x + dimension.length * this.width, y: SCREEN_HEIGHT - GROUND_HEIGHT }];
   }
 }
 

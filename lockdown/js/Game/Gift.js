@@ -1,4 +1,4 @@
-class Gift extends SpriteRender {
+class Gift extends SpriteRenderer {
   constructor(ctx, x, y) {
     super(ctx);
     this.ctx = ctx;

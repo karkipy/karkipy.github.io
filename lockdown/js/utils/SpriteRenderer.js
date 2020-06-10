@@ -1,4 +1,4 @@
-class SpriteRender {
+class SpriteRenderer {
   constructor(ctx) {
     this.ctx = ctx;
   }

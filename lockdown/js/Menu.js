@@ -1,10 +1,9 @@
-class Menu extends SpriteRender{
+class Menu extends SpriteRenderer{
   constructor(ctx) {
     super(ctx);
     this.ctx = ctx;
     this.key = null;
     this.image = loadedImages[GAME_UTIL_SPRITE_INDICATOR];
-    this.logoDimension = SPRITE_MAPPER[LOGO_INDICATOR];
     this.cursorDimension = SPRITE_MAPPER[CURSOR_INDICATOR];
     this.logoDimension =  SPRITE_MAPPER[LOGO_INDICATOR];
     this.menuItem = [
@@ -33,11 +32,9 @@ class Menu extends SpriteRender{
       3: 100,
       4: 110,
     };
-
     this.cursorAnimatonId = 0;
     this.cursorInterval = 25;
     this.cursorAnimate = false;
-
   }
 
   draw() {
