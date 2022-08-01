@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Bingo</title>
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div style="position: relative; width: 800px;  margin: auto;">
+    <div class="canvas-container">
+      <canvas id="gameCanvas" width="800" height="600" />
+    </div>
+    <button id="spin-btn" onclick="onSpinCall()">SPIN</button>
+  </div>
+  <div id="usedUp"></div>
+  </body>
+
+  <!-- Scripts will be here -->
+  <!-- Firstly variables for the game -->
+  <script src="js/Resource.js"></script>
+  <script src="js/Indicator.js"></script>
+  <script src="js/Constant.js"></script>
+
+  <!-- Helper Scripts -->
+  <script src="js/Helper.js"></script>
+  <script src="js/SpriteRenderer.js"></script>
+  <script src="js/GameObject.js"></script>
+
+  <!-- Map dimensions of the sprite  -->
+  <script src="js/MapConstant.js"></script>
+
+  <!-- Game Element that are usable will be called here -->
+  <script src="js/Wheel.js"></script>
+  <script src="js/Stand.js"></script>
+  <script src="js/TV.js"></script>
+  <script src="js/Ball.js"></script>
+  <script src="js/AnimatedBall.js"></script>
+  <!-- The game's main entry point -->
+  <script src="js/game.js"></script>
+
+  <script src="js/input.js"></script>
+  <!-- load the game's assert -->
+  <script src="js/loader.js"></script>
+</html>

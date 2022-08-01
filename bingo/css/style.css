@@ -1,0 +1,52 @@
+*{
+  padding: 0;
+  margin: 0;
+  background-color: #C3C3C3;
+  font-family: 'Press Start 2P';
+}
+
+@font-face {
+  font-family: gameFont;
+  src: url(../fonts/press-start-2p.ttf);
+}
+
+
+.canvas-container{
+  margin: auto;
+  border: 1px solid black;
+  width: 800px;
+  height: 600px;
+  background-color: #C3C3C3;
+  margin-top: 50px;
+}
+
+
+#spin-btn {
+  border: none;
+  position: absolute;
+  bottom: -30px;
+  left: 370px;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  background-color: #e4000F;
+  color: #f5f2d0;
+  box-shadow: 0 9px #999;
+  cursor: pointer;
+}
+
+#usedUp {
+  padding-top: 40px;
+  margin: auto;
+  width: 800px;
+}
+
+
+#spin-btn:hover { background-color: #e4001F }
+
+#spin-btn:active {
+  background-color: #EB1D36;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
