@@ -1,9 +1,17 @@
 let currentNumber = null;
 let usedUpNumbers = [];
+const minNumber = 1;
+const maxNumber = 75;
 
 function generateNumber() {
+  if (usedUpNumbers.length >= maxNumber) {
+    const div = document.getElementById('usedUp');
+    const text = `Game Over, Please reload to play new game`;
+    div.innerText = text;
+    return;
+  }
   while(true) {
-    currentNumber = Math.floor(Math.random() * 75) + 1
+    currentNumber = Math.floor(Math.random() * maxNumber) + minNumber
     if (!usedUpNumbers.includes(currentNumber)) {
       usedUpNumbers.push(currentNumber);
       return currentNumber;
