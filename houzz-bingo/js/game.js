@@ -1,7 +1,7 @@
 let currentNumber = null;
 let usedUpNumbers = [];
 const minNumber = 1;
-const maxNumber = 90;
+const maxNumber = 75;
 
 function generateNumber() {
   if (usedUpNumbers.length >= maxNumber) {
