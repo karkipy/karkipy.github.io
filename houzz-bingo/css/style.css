@@ -44,6 +44,17 @@
   width: 800px;
 }
 
+.title-card {
+  position: absolute;
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-size: 26px;
+  left: 124px;
+  top: 131px;
+  transform: rotatez(-8.65deg);
+}
+
 
 #spin-btn:hover {
   background-color: #45a912
