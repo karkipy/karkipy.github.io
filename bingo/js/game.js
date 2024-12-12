@@ -1,7 +1,7 @@
 let currentNumber = null;
 let usedUpNumbers = [];
 const minNumber = 1;
-const maxNumber = 75;
+const maxNumber = 90;
 
 function generateNumber() {
   if (usedUpNumbers.length >= maxNumber) {
@@ -39,6 +39,7 @@ function rollTheNumber() {
 
 const wheel = new Wheel(WHEEL_INDICATOR, rollTheNumber);
 const stand = new Stand(STAND_INDICATOR);
+const background = new Background(FIREPLACE_INDICATOR);
 
 
 const bingoballs = [];
@@ -61,6 +62,7 @@ function initAll() {
   wheel.setImage();
   stand.setImage();
   tv.setImage();
+  background.setImage();
   animatedBall.setImage();
   bingoballs.forEach((b) => {
     b.setImage();
@@ -74,6 +76,7 @@ function clearAll() {
 
 function mainLoop() {
   clearAll();
+  background.draw();
   bingoballs.forEach((b) => {
     b.draw();
   })

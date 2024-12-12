@@ -19,5 +19,8 @@ const MAP_IMAGE = {
   ],
   [BALL_INDICATOR]: [
     getSpriteObject(0, 0, 16, 16, WHEEL_X - 5 - BALL_WIDTH + 160, STAND_Y, BALL_WIDTH, BALL_WIDTH),
-  ]
+  ],
+  [FIREPLACE_INDICATOR]: [
+    getSpriteObject(0, 0, 570, 598, 140, 54, 620, 598),
+  ],
 }

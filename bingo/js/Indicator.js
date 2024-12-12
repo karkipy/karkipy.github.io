@@ -10,3 +10,4 @@ const WHEEL_INDICATOR = getUniqueIndicator();
 const STAND_INDICATOR = getUniqueIndicator();
 const TV_INDICATOR = getUniqueIndicator();
 const BALL_INDICATOR = getUniqueIndicator();
+const FIREPLACE_INDICATOR =  getUniqueIndicator();

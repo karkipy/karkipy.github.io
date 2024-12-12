@@ -6,11 +6,30 @@
   </head>
   <body>
     <div style="position: relative; width: 800px;  margin: auto;">
-    <div class="canvas-container">
-      <canvas id="gameCanvas" width="800" height="600" />
+      <div class="canvas-container">
+        <canvas id="gameCanvas" width="800" height="600" />
+      </div>
+      <button id="spin-btn" onclick="onSpinCall()">SPIN</button>
+      <img src="images/christmas.png" class="image tree"  /> 
+      <img src="images/board.png" class="image board"  /> 
+      <div class="board-text">
+        <p>HOUZZ</p>
+        <p>End of year bingo</p>
+      </div>
+      <img src="images/duck.png" class="image duck" />
+      <img src="images/gifts.png" class="image gifts" />
+
+      <div class="bob-head-container">
+          <img src="images/nibesh.png" class="image nibesh bob-head" />
+          <img src="images/chu.png" class="image chu bob-head" />
+          <img src="images/anuska.png" class="image anuska bob-head" />
+          
+      </div>
+
+      <!-- <img src="images/duck.png" class="image" />
+      <img src="images/christmas.png" class="image"  /> -->
+     
     </div>
-    <button id="spin-btn" onclick="onSpinCall()">SPIN</button>
-  </div>
   <div id="usedUp"></div>
   </body>
 
@@ -30,6 +49,7 @@
 
   <!-- Game Element that are usable will be called here -->
   <script src="js/Wheel.js"></script>
+  <script src="js/Background.js"></script>
   <script src="js/Stand.js"></script>
   <script src="js/TV.js"></script>
   <script src="js/Ball.js"></script>

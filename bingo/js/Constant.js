@@ -24,6 +24,7 @@ const IMAGES = [
   { id: STAND_INDICATOR, src : 'images/stand.png' },
   { id: TV_INDICATOR, src : 'images/TV.png' },
   { id: BALL_INDICATOR, src : 'images/ball.png' },
+  { id: FIREPLACE_INDICATOR, src : 'images/fireplace.png' },
 ];
 
 const SOUNDS = [
